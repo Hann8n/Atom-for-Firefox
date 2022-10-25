@@ -1,7 +1,7 @@
 <img width="1205" alt="Screenshot 2022-10-25 at 12 06 49 AM" src="https://user-images.githubusercontent.com/87556343/197682527-843babf3-3edf-4e0c-81e0-ba1b05ce4844.png">
 
 
-## Fluidfox - Proton: A sleek MacOS inspired look, with the classic Proton UI.
+## Fluidfox Proton: A sleek MacOS inspired look, with the classic Proton UI.
 Fork was created as an easier to use alternative for long-term Firefox users
 
 All rights belong to Daniel Candelaria 

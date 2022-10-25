@@ -1,17 +1,10 @@
-<img width="1920" alt="image" src="https://user-images.githubusercontent.com/26730273/193400015-deee10f2-8010-4b86-ac4f-e55afe9509d7.png">
+<img width="1205" alt="Screenshot 2022-10-25 at 12 06 49 AM" src="https://user-images.githubusercontent.com/87556343/197682527-843babf3-3edf-4e0c-81e0-ba1b05ce4844.png">
 
 
-## Fluidfox: A Clean Firefox Theme for mac OS
-Fluidfox is meant to replace the standard firefox theme with one that has more polish. Uneven spacing has been fixed, harsh 90's-era shadows have been modernized, and native mac OS styling has been added. This theme supports both light and dark mode.
+## Fluidfox - Default: A sleek MacOS inspired look, with the classic Proton UI.
+Fork was created as an easier to use alternative for long-term Firefox users
 
-## Surf the web in style with a beautiful theme
-Using a privacy-first web browser that lets you block ads shouldn't burden you with bad design.
-
-### Stunning transparency
-Use the built-in stunning mac OS transparency with Firefox without editing code yourself.
-
-### Dark mode included
-Dim the lights with a built in dark mode. Just set Firefox's theme to Dark or Auto.
+All rights belong to Daniel Candelaria
 
 ### Set of 4k wallpapers included
 

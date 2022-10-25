@@ -1,4 +1,11 @@
 /* --------------------------------------------------------------------------------------------------------- 
+FluidFox - Default is a Fork of the Fluidfox Repository found at https://github.com/dannycandle/FluidFox, 
+Code and Artwork was provided by Daniel Candelaria. This code is provided As-is and may or may not be updated
+
+*Transparency effects only availble on MacOS
+
+------------------------------------------------------------------------------------------------------------
+
 Fluidfox - What Mozilla Should've Shipped Firefox With in the First Place.
 
 The goal of this userChrome is to add some much needed polish to default firefox themes. Many details have 
@@ -18,24 +25,13 @@ Theme Name: Fluidfox
 Author: Daniel Candelaria
 Platform: Mac OS
 Firefox Versions: 102+
+
+Fluidfox - Default Forked by: Jack Hannon
 */
 
 /* ------------------------- */
 /* Spacing, Padding, Shadows */
 /* ------------------------- */
-
-/* Tab Padding */
-#tabbrowser-tabs .tabbrowser-tab{
-   --tab-border-radius: 7px;
-   --tab-block-margin: 6px 4px;
-   --tab-min-width: 40px;
-   --tab-label-mask-size: 0.75em;
-   --inline-tab-padding: 10px;}
- 
- :root {
- --tab-min-height: 28px !important;
- --tab-max-height: 28px !important;
- }
 
  /* Suppress Connecting/Waiting/Reading/Transerring */
 #statuspanel[type="status"] {
@@ -53,19 +49,7 @@ Firefox Versions: 102+
  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0) !important;}
 
 
- /* Bookmarks Bar Padding */
-
- #PersonalToolbar {
-   padding: 4px;
-}
-
-
 /* Active Address Bar Dropdown */
-
-:root[lwt-default-theme-in-dark-mode]  #urlbar[breakout][breakout-extend] > #urlbar-background {
-   border-radius: 8px !important;
-   box-shadow: 0px 0px 20px -11px rgba(0,0,0,.2) !important;
-}
 
 
 /* Focused Address/URL Field */
@@ -78,22 +62,6 @@ Firefox Versions: 102+
  /*  -------------  */
  /* | NavBar Size | */
  /*  -------------  */
- 
- #urlbar-input {
-   height: 15px !important;
- }
- 
- #urlbar{
-   min-height: 27px !important;
- }
- 
- .toolbarbutton-badge {
-   /* min-width: 10px !important; */
- }
- 
- #urlbar-background {
-   border-radius: 7px !important;
- }
  
  
  /*  ---------  */
@@ -163,11 +131,11 @@ Firefox Versions: 102+
  /* Inactive Address/Search Field Background */
  
  :root:not([lwt-default-theme-in-dark-mode]) #urlbar-background {
-   background-color: rgba(0,0,0,.03) !important;
+   background-color: rgba(0,0,0,.05) !important;
  }
  
  :root[lwt-default-theme-in-dark-mode] #urlbar-background {
-    background: rgba(255,255,255,.03) !important;
+    background: rgba(255,255,255,.05) !important;
  }
 
  
@@ -178,7 +146,7 @@ Firefox Versions: 102+
  }
  
  :root[lwt-default-theme-in-dark-mode]  #urlbar[breakout][breakout-extend] > #urlbar-background {
-    background: rgba(60,60,70,.97) !important;
+    background: rgba(60,60,70,1) !important;
  }
 
  

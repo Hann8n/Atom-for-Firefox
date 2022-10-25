@@ -4,7 +4,8 @@
 ## Fluidfox - Default: A sleek MacOS inspired look, with the classic Proton UI.
 Fork was created as an easier to use alternative for long-term Firefox users
 
-All rights belong to Daniel Candelaria
+All rights belong to Daniel Candelaria 
+https://github.com/dannycandle/FluidFox
 
 ### Set of 4k wallpapers included
 

@@ -1,12 +1,12 @@
 @media (prefers-color-scheme: light) {
   :root {
-    --backgroundpic: url(tab-backdrop-light.png);
+    --backgroundpic: url(firefox.png);
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --backgroundpic: url(tab-backdrop-dark.png);
+    --backgroundpic: url(firefox.png);
   }
 }
 

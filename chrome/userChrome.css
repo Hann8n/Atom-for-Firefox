@@ -48,21 +48,12 @@ Fluidfox - Default Forked by: Jack Hannon
  [multiselected])>.tab-stack>.tab-background { 
  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0) !important;}
 
-
-/* Active Address Bar Dropdown */
-
-
 /* Focused Address/URL Field */
 
 #urlbar-background { 
     outline: none !important; 
     box-shadow: none !important
 }
- 
- /*  -------------  */
- /* | NavBar Size | */
- /*  -------------  */
- 
  
  /*  ---------  */
  /* | Borders | */
@@ -146,7 +137,7 @@ Fluidfox - Default Forked by: Jack Hannon
  }
  
  :root[lwt-default-theme-in-dark-mode]  #urlbar[breakout][breakout-extend] > #urlbar-background {
-    background: rgba(60,60,70,1) !important;
+    background: rgba(64,64,64,1) !important;
  }
 
  

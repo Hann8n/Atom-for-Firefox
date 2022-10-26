@@ -17,6 +17,6 @@ Currently Optimized for Dark Mode, working on better support for light mode
 4. Paste the entire "Chrome" folder from this repository and restart Firefox.
 
 ## Acknowledgements
-https://github.com/zvuc/firefox-macos-native-tabbar
-https://github.com/datguypiko/Firefox-Mod-Blur
-https://github.com/dannycandle/FluidFox
+- https://github.com/zvuc/firefox-macos-native-tabbar
+- https://github.com/datguypiko/Firefox-Mod-Blur
+- https://github.com/dannycandle/FluidFox

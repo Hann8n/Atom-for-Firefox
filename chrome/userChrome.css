@@ -1,37 +1,19 @@
 /* --------------------------------------------------------------------------------------------------------- 
-FluidFox - Proton is a Fork of the Fluidfox Repository found at https://github.com/dannycandle/FluidFox, 
-Code and Artwork was provided by Daniel Candelaria. This code is provided As-is and may or may not be updated
+Based on Fluidfox by Daniel Canelaria and Firefox-Mod-Blur by Datguypiko
 
-*Transparency effects only availble on MacOS
-
-------------------------------------------------------------------------------------------------------------
-
-Fluidfox - What Mozilla Should've Shipped Firefox With in the First Place.
-
-The goal of this userChrome is to add some much needed polish to default firefox themes. Many details have 
-been painstakingly modified to create an overall more professional appearce. Gone are the heavy shadows from
-the 90's, unbalanced spacing, and non-native vibes. In their place is a minimal, yet carefully modified, 
-userChrome that will please developers, designers, and grandmas alike.
-
-This theme is fully compatible with both light and dark modes, so feel free to use the version that fits
-your mood. However, you will likely run into issues if installing 3rd party themes from addons.mozilla.org.
-
-If you're using this theme, I would love to get your feedback via the GitHub page below:
-https://github.com/dannycandle/FluidFox
+Edited, compiled, and maintained by Jack Hannon
 --------------------------------------------------------------------------------------------------------- */
 
 /* Theme information
-Theme Name: Fluidfox
-Author: Daniel Candelaria
-Platform: Mac OS
+Theme Name: Fluidfox Proton
+Author: Jack Hannon
+Platform: macOS
 Firefox Versions: 102+
 
-Fluidfox - Default Forked by: Jack Hannon
 */
-
-/* ------------------------- */
-/* Spacing, Padding, Shadows */
-/* ------------------------- */
+ /*  ---------  */
+ /* | Spacing | */
+ /*  ---------  */
 
  /* Suppress Connecting/Waiting/Reading/Transerring */
 #statuspanel[type="status"] {
@@ -81,13 +63,13 @@ Fluidfox - Default Forked by: Jack Hannon
     border: 0 !important;
  }
  
- #urlbar[open] > .urlbarView > .urlbarView-body-outer > .urlbarView-body-inner {
+#urlbar[open] > .urlbarView > .urlbarView-body-outer > .urlbarView-body-inner {
      border-top: 0 !important;
  }
 
  
  
- /* Add Transparency - Comment out this section if you prefer no transparency! */
+ /*Add Transparency - Comment out this section if you prefer no transparency! */
  :root:not(:-moz-window-inactive) #navigator-toolbox {
     -moz-appearance: -moz-mac-source-list !important;
  }
@@ -105,18 +87,18 @@ Fluidfox - Default Forked by: Jack Hannon
  
  :root[lwt-default-theme-in-dark-mode] .tab-background[selected],
  .tab-background[multiselected="true"] {	
-    background: rgba(255,255,255,.06) !important;
+    background: rgba(0,0,0,.2) !important;
  }
  
  
  /* Navigation Bar Background */
  
  :root:not([lwt-default-theme-in-dark-mode]) #nav-bar {
-   background-color: rgba(255,255,255,.6) !important;
+   background-color: rgba(0,0,0,0.05) !important;
  }
 
  :root[lwt-default-theme-in-dark-mode] #nav-bar {
-   background-color: rgba(65,65,65,.6) !important; 
+   background-color: rgba(0,0,0,0.3) !important; 
  }
  
  /* Inactive Address/Search Field Background */
@@ -126,7 +108,7 @@ Fluidfox - Default Forked by: Jack Hannon
  }
  
  :root[lwt-default-theme-in-dark-mode] #urlbar-background {
-    background: rgba(255,255,255,.05) !important;
+    background: rgba(255,255,255,.09) !important;
  }
 
  
@@ -137,8 +119,8 @@ Fluidfox - Default Forked by: Jack Hannon
  }
  
  :root[lwt-default-theme-in-dark-mode]  #urlbar[breakout][breakout-extend] > #urlbar-background {
-    background: rgba(64,64,64,1) !important;
- }
+    background: rgba(34,34,36,1) !important;
+}
 
  
  /* Bookmarks Bar */
@@ -161,3 +143,71 @@ Fluidfox - Default Forked by: Jack Hannon
  :root:not([lwt-default-theme-in-dark-mode]) #navigator-toolbox {
    border-color:rgba(240,240,240, 1) !important;
  }
+ /* Navigation bar Buttons */
+:root,toolbar{ --toolbarbutton-hover-background: rgba(255,255,255,.11) !important; }
+
+ /* Show Tab close button on hover */
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+  display: -moz-box !important;
+  opacity: 0;
+  visibility: collapse !important;
+  transition: opacity 0.25s, visibility 0.25s ease-in !important;
+}
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  opacity: 1;
+  visibility: visible !important;
+  border-radius: 3px 3px 3px 3px !important;
+}
+
+ /* Toolbar Buttons */
+#PersonalToolbar {
+  background-image: url(image/noise-512x512.png) !important;
+  background-color: #2a2a2ac0 !important;
+  -webkit-backdrop-filter: blur(32px) !important;
+  backdrop-filter: blur(32px) !important;
+}
+:root:-moz-lwtheme {
+	--arrowpanel-background:  rgba(34, 34, 36, 1) !important;
+	-panel-separator-zap-gradient: linear-gradient(90deg, rgba(11,11,11,1) 0%, rgba(193,118,40,1) 39%, rgba(52,12,48,1) 100%) !important;
+	--button-hover-bgcolor: rgba(159, 159, 159, 0.35) !important;
+	--button-active-bgcolor: rgba(255, 255, 255, .2) !important;
+	--button-bgcolor: rgba(117, 117, 117, 0.9) !important;
+	--toolbarbutton-icon-fill-opacity: 0.8 !important;
+	--arrowpanel-border-color: rgb(55, 55, 55) !important;
+}
+
+:root:-moz-lwtheme  {
+	--dark-menu-background-color: rgba(34, 34, 36, .5) !important;
+	--dark-menu-border-color: rgb(55, 55, 55) !important;
+	--dark-menuitem-hover-background-color: rgba(159, 159, 159, 0.35) !important;
+}
+
+/* Show URL buttons on Hover */
+#nav-bar:not([customizing="true"])
+  > #nav-bar-customization-target
+  > #urlbar-container:not(:hover)
+  > #urlbar:not([focused])
+  > #urlbar-input-container
+  > #page-action-buttons {
+  opacity: 0;
+}
+#page-action-buttons {
+  transition: opacity 0.15s ease;
+}
+}
+#nav-bar:not([customizing="true"])
+  > #nav-bar-customization-target
+  > #urlbar-container:not(:hover)
+  > #urlbar:not([focused])
+  > #urlbar-input-container
+  > #tracking-protection-icon-container {
+  opacity: 0;
+}
+#tracking-protection-icon-container {
+  transition: opacity 0.15s ease;
+}
+
+/*  --------------  */
+ /* | Experimental | */
+ /*  --------------  */
+

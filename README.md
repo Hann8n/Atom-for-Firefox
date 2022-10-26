@@ -2,9 +2,9 @@
 
 
 ## Fluidfox Proton: A sleek MacOS inspired look, with the classic Proton UI.
-Fork was created as an easier to use alternative for long-term Firefox users
+Fork was created as an easier to use alternative for long-time Firefox users
 
-All rights belong to Daniel Candelaria 
+Shout to the Fluidfox Dev
 https://github.com/dannycandle/FluidFox
 
 ### Set of 4k wallpapers included
@@ -16,10 +16,12 @@ wallpaper-dark.png<img width="1920" alt="image" src="https://user-images.githubu
 
 ## Information
 - Designer: Daniel Candelaria
+- Proton Theme: Jack Hannon
 - Platforms Supported: mac OS
 - Compatibility: Firefox 102+
 
 ## Installation
 1. Go to about:config and update toolkit.legacyUserProfileCustomizations.stylesheets to true.
-2. Go to about:support and click "Show in Finder" in the Profile Folder field. 
-3. Paste the entire "Chrome" folder from this repository and restart Firefox.
+2. Go to about:support and click "Show in Finder" in the Profile Folder field.
+3. Click on folder containing all core Firefox files
+4. Paste the entire "Chrome" folder from this repository and restart Firefox.

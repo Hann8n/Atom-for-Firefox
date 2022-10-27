@@ -2,6 +2,10 @@
 Based on Fluidfox by Daniel Canelaria and Firefox-Mod-Blur by Datguypiko
 
 Edited, compiled, and maintained by Jack Hannon
+
+Emoji Codes ⚙️:
+❗️ - Interactable Element: Remove comment to enable (/*) Be sure to delete emoji aswell
+⚠️ - May break portions of browser, use caution (Ctrl Z / Cmd Z is your friend)
 --------------------------------------------------------------------------------------------------------- */
 
 /* Theme information
@@ -69,12 +73,12 @@ Firefox Versions: 102+
 
  
  
- /*Add Transparency - Comment out this section if you prefer no transparency! */
- :root:not(:-moz-window-inactive) #navigator-toolbox {
+ /*Add Transparency | Comment out to remove transparency completely */
+   :root:not(:-moz-window-inactive) #navigator-toolbox {
     -moz-appearance: -moz-mac-source-list !important;
  }
  
- :root:-moz-window-inactive #navigator-toolbox {
+   :root:-moz-window-inactive #navigator-toolbox {
    -moz-appearance: -moz-mac-source-list !important;
 }
 
@@ -183,7 +187,7 @@ Firefox Versions: 102+
 }
 
 /* Show URL buttons on Hover */
-#nav-bar:not([customizing="true"])
+  > #nav-bar:not([customizing="true"])
   > #nav-bar-customization-target
   > #urlbar-container:not(:hover)
   > #urlbar:not([focused])
@@ -207,6 +211,176 @@ Firefox Versions: 102+
   transition: opacity 0.15s ease;
 }
 
-/*  --------------  */
- /* | Experimental | */
- /*  --------------  */
+/*Full Screen Warning*/
+#fullscreen-warning{
+    background-color: rgba(25,25,25) !important;
+    border-color: rgb(20,20,20) !important;
+    max-width: 500px !important;
+    max-height: 50px !important;
+    border-radius: 50px !important;
+    font-size: 12px !important;
+}
+
+.pointerlockfswarning-generic-text,
+.pointerlockfswarning-domain-text{
+    font-size: 15px !important;
+    color: rgb(255,255,255) !important;
+    text-shadow: none !important;
+}
+/* Disabling Transparency in Full Screen */
+#navigator-toolbox[inFullscreen="true"] #nav-bar{
+    background-color: rgba(25,25,25) !important;
+ }
+#navigator-toolbox[inFullscreen="true"] .tab-background[selected],
+ .tab-background[multiselected="true"] {	
+    background: rgba(25,25,25) !important;
+}
+#navigator-toolbox[inFullscreen="true"]  :root:-moz-window-inactive #navigator-toolbox {
+   -moz-appearance: -moz-mac-source-list !important;
+}
+#TabsToolbar[inFullscreen="true"]{
+  background: #242424 !important;
+}
+
+/* Uncomment to Hide tabs bar for Tree style tabs (Credit u/jfgxyz on Reddit) */
+❗  /* toolbar#TabsToolbar {
+    height: 0;
+    min-height: 0 !important;
+    padding-top: 12px;
+}
+ 
+.toolbar-items {
+    display: none;
+}
+ 
+hbox#nav-bar-customization-target {
+    padding-left: 80px !important;
+}
+
+ /*  -----------------  */
+ /* |⚠️ Experimental ⚠️| */
+ /*  ------------------  */
+
+/* For use with TreeStleTabs (Experimental, funtionality Limited)
+/* #sidebar-box
+{
+  background: transparent !important;
+}
+
+#sidebar-box:-moz-lwtheme-darktext,
+.table-widget-empty-text:-moz-lwtheme-darktext
+{
+    -moz-appearance: -moz-mac-vibrant-titlebar-light !important;
+ }
+
+#sidebar-box:-moz-lwtheme-brighttext,
+.table-widget-empty-text:-moz-lwtheme-brighttext
+{
+    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+ }
+
+/* window transparencies */
+/* #main-window {
+	background: var(--bct-main-window) !important;
+	-moz-appearance: var(--bct-moz-appearance) !important;
+}
+/* customization page */
+/* #customization-container {
+	background: var(--bct-w-pages-bg) !important;
+}
+/* blank page */
+/* #tabbrowser-tabpanels{
+	background: var(--bct-w-pages-bg) !important;
+}
+
+/* navbar / tabbar / titlebar */
+/* #nav-bar {
+	background: transparent !important;
+	border-color: transparent !important;
+}
+#navigator-toolbox {
+	background: var(--bct-w-nav-bg) !important;
+	border: none !important;
+}
+#urlbar-background {
+	background: var(--bct-w-url-bg) !important;
+}
+
+/* Sidebar */
+/* #sidebar-box,
+#sidebar-box:-moz-lwtheme-darktext,
+#sidebar-box:-moz-lwtheme-brighttext {
+	--sidebar-background-color: var(--bct-w-sidebar-bg) !important;
+	--sidebar-text-color: var(--bct-w-sidebar-color) !important;
+	background: var(--bct-w-sidebar-bg) !important;
+
+}
+#sidebar,
+.sidebar-panel {
+	background: transparent !important;
+}
+
+#main-window
+{
+    background: transparent !important;
+}
+
+#TabsToolbar:-moz-lwtheme-darktext,
+.table-widget-empty-text:-moz-lwtheme-darktext
+{
+    -moz-appearance: -moz-mac-vibrant-titlebar-light !important;
+ }
+
+#TabsToolbar:-moz-lwtheme-brighttext,
+.table-widget-empty-text:-moz-lwtheme-brighttext
+{
+    -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+ }
+
+.tabbrowser-tab[selected="true"] .tab-label:-moz-lwtheme-brighttext
+{
+    color:white !important;
+}
+
+.tabbrowser-tab .tab-label:-moz-lwtheme-brighttext
+{
+    color:rgba(255,255,255,0.7) !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-background:-moz-lwtheme-brighttext
+{
+    box-shadow: inset 0em -4em 0em var(--toolbar-bgcolor) !important;
+}
+
+#navigator-toolbox {
+    background-color: transparent !important;
+}
+toolbar#TabsToolbar {
+	height: 0;
+	min-height: 0 !important;
+	padding-top: 12px;
+}
+
+.toolbar-items {
+	display: none;
+}
+
+hbox#nav-bar-customization-target {
+	padding-left: 80px !important;
+}
+*/
+
+/* Uncomment to Hide TreeStyleTab Header (Only Funtion Working!!!!) */ 
+❗️ /* #sidebar-box #sidebar-header {
+   display: none !important;
+}
+
+/*
+:root #nav-bar,
+#PersonalToolbar,
+#titlebar,
+.tab-background[selected="true"] 
+{
+  -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+  -moz-font-smoothing-background-color: -moz-mac-vibrant-titlebar-dark !important;
+}

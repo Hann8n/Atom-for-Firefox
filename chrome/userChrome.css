@@ -187,7 +187,7 @@ Firefox Versions: 102+
 }
 
 /* Show URL buttons on Hover */
-  > #nav-bar:not([customizing="true"])
+   #nav-bar:not([customizing="true"])
   > #nav-bar-customization-target
   > #urlbar-container:not(:hover)
   > #urlbar:not([focused])
@@ -197,7 +197,6 @@ Firefox Versions: 102+
 }
 #page-action-buttons {
   transition: opacity 0.15s ease;
-}
 }
 #nav-bar:not([customizing="true"])
   > #nav-bar-customization-target
@@ -211,7 +210,7 @@ Firefox Versions: 102+
   transition: opacity 0.15s ease;
 }
 
-/* Full Screen Warning */
+/*Full Screen Warning*/
 #fullscreen-warning{
     background-color: rgba(25,25,25) !important;
     border-color: rgb(20,20,20) !important;
@@ -226,6 +225,20 @@ Firefox Versions: 102+
     font-size: 15px !important;
     color: rgb(255,255,255) !important;
     text-shadow: none !important;
+}
+/* Disabling Transparency in Full Screen */
+#navigator-toolbox[inFullscreen="true"] #nav-bar{
+    background-color: rgba(25,25,25) !important;
+ }
+#navigator-toolbox[inFullscreen="true"] .tab-background[selected],
+ .tab-background[multiselected="true"] {	
+    background: rgba(25,25,25) !important;
+}
+#navigator-toolbox[inFullscreen="true"]  :root:-moz-window-inactive #navigator-toolbox {
+   -moz-appearance: -moz-mac-source-list !important;
+}
+#TabsToolbar[inFullscreen="true"]{
+  background: #242424 !important;
 }
 
 /* Uncomment to Hide tabs bar for Tree style tabs (Credit u/jfgxyz on Reddit) */
@@ -246,9 +259,8 @@ hbox#nav-bar-customization-target {
  /*  -----------------  */
  /* |⚠️ Experimental ⚠️| */
  /*  ------------------  */
-
-/* Disabling Transparency in Full Screen (Dark mode Only for Right Now)*/
-/* #navigator-toolbox[inFullscreen="true"] #nav-bar{
+/* Disabling Transparency in Full Screen */
+❗️ /* #navigator-toolbox[inFullscreen="true"] #nav-bar{
     background-color: rgba(25,25,25) !important;
  }
 #navigator-toolbox[inFullscreen="true"] .tab-background[selected],
@@ -261,7 +273,7 @@ hbox#nav-bar-customization-target {
 #TabsToolbar[inFullscreen="true"]{
   background: #242424 !important;
 }
-----------
+
 /* For use with TreeStleTabs (Experimental, funtionality Limited)
 /* #sidebar-box
 {
@@ -375,3 +387,12 @@ hbox#nav-bar-customization-target {
 ❗️ /* #sidebar-box #sidebar-header {
    display: none !important;
 }
+
+/*
+:root #nav-bar,
+#PersonalToolbar,
+#titlebar,
+.tab-background[selected="true"] 
+{
+  -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
+  -moz-font-smoothing-background-color: -moz-mac-vibrant-titlebar-dark !important;}

@@ -375,13 +375,3 @@ hbox#nav-bar-customization-target {
 ❗️ /* #sidebar-box #sidebar-header {
    display: none !important;
 }
-
-
-*/:root #nav-bar,
-#PersonalToolbar,
-#titlebar,
-.tab-background[selected="true"] 
-{
-  -moz-appearance: -moz-mac-vibrant-titlebar-dark !important;
-  -moz-font-smoothing-background-color: -moz-mac-vibrant-titlebar-dark !important;
-}
